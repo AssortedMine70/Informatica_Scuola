@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="ExSum.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="19"/>
+        <CursorPos X="31" Y="41"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="19" HistoryIndex="18">
+      <Position1>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="42" Column="15" TopLine="8"/>
+      </Position1>
+      <Position2>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="6" Column="6"/>
+      </Position2>
+      <Position3>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="5" Column="14"/>
+      </Position3>
+      <Position4>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="31" Column="22" TopLine="10"/>
+      </Position4>
+      <Position5>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="42" Column="12" TopLine="10"/>
+      </Position5>
+      <Position6>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="30" Column="16"/>
+      </Position6>
+      <Position7>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="32" Column="29" TopLine="13"/>
+      </Position7>
+      <Position8>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="10" Column="9"/>
+      </Position8>
+      <Position9>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="58" Column="27" TopLine="24"/>
+      </Position9>
+      <Position10>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="14" Column="68"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="15" Column="30"/>
+      </Position11>
+      <Position12>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="12" Column="7"/>
+      </Position12>
+      <Position13>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="14" Column="8"/>
+      </Position13>
+      <Position14>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="53" Column="16" TopLine="25"/>
+      </Position14>
+      <Position15>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="37" Column="15" TopLine="27"/>
+      </Position15>
+      <Position16>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="44" Column="26" TopLine="29"/>
+      </Position16>
+      <Position17>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="36" Column="25" TopLine="26"/>
+      </Position17>
+      <Position18>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="44" Column="26" TopLine="25"/>
+      </Position18>
+      <Position19>
+        <Filename Value="ExSum.lpr"/>
+        <Caret Line="29" Column="19" TopLine="18"/>
+      </Position19>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

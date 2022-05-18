@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="titina.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="18"/>
+        <CursorPos X="12" Y="48"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="12" HistoryIndex="11">
+      <Position1>
+        <Filename Value="titina.lpr"/>
+        <Caret Line="18" Column="29"/>
+      </Position1>
+      <Position2>
+        <Filename Value="titina.lpr"/>
+        <Caret Line="15" Column="3"/>
+      </Position2>
+      <Position3>
+        <Filename Value="titina.lpr"/>
+        <Caret Line="24" Column="24"/>
+      </Position3>
+      <Position4>
+        <Filename Value="titina.lpr"/>
+        <Caret Line="25" Column="22"/>
+      </Position4>
+      <Position5>
+        <Filename Value="titina.lpr"/>
+        <Caret Line="30" Column="71" TopLine="4"/>
+      </Position5>
+      <Position6>
+        <Filename Value="titina.lpr"/>
+        <Caret Line="29" Column="21" TopLine="5"/>
+      </Position6>
+      <Position7>
+        <Filename Value="titina.lpr"/>
+        <Caret Line="17" Column="12" TopLine="5"/>
+      </Position7>
+      <Position8>
+        <Filename Value="titina.lpr"/>
+        <Caret Line="16" Column="22" TopLine="6"/>
+      </Position8>
+      <Position9>
+        <Filename Value="titina.lpr"/>
+        <Caret Line="38" Column="13" TopLine="12"/>
+      </Position9>
+      <Position10>
+        <Filename Value="titina.lpr"/>
+        <Caret Line="33" Column="58" TopLine="17"/>
+      </Position10>
+      <Position11>
+        <Filename Value="titina.lpr"/>
+        <Caret Line="16" Column="22"/>
+      </Position11>
+      <Position12>
+        <Filename Value="titina.lpr"/>
+        <Caret Line="22" Column="37" TopLine="3"/>
+      </Position12>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

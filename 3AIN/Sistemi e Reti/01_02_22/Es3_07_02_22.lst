@@ -1,0 +1,23 @@
+---------------------------------------------
+Z80 ASSEMBLER LISTING
+Line   Addr Opcode      Label   Instruction
+---------------------------------------------
+0001   0000             	;Federico Santucci, 3AIN
+0002   0000             	org 0h
+0003   0000 C3 00 01    	jp 100h
+0004   0003             	org 100h
+0005   0100 06 00       main:	ld B, 0h
+0006   0102 21 00 02    	ld HL, 200h
+0007   0105 7D          L1:	ld A, L
+0008   0106 FE FF       	cp 0FFh
+0009   0108 28 09       	jr z, L2
+0010   010A 7E          	ld A, (HL)
+0011   010B FE FF       	cp 0FFh
+0012   010D 23          	inc HL
+0013   010E 20 F5       	jr nz, L1
+0014   0110 04          	inc B
+0015   0111 18 F2       	jr L1
+0016   0113 21 00 03    L2:	ld HL, 300h
+0017   0116 70          	ld (HL), B
+0018   0117 76          	halt
+Number of errors = 0
