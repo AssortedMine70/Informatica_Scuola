@@ -78,7 +78,7 @@ begin
   writeln('Lettera dalla maggior occorrenza: ', max);
   writeln('Lettera dalla minor   occorrenza: ', min);
   writeln('Presenza della parola ''glutamy'': ', glutamyCount, 'volte.');
-  writeln('Presenza della parola ''soleucy'': ', soleucyCount, 'volte');
+  writeln('Presenza della parola ''soleucy'': ', soleucyCount, 'volte.');
   readln();
 end.
 

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="checkmate.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="88"/>
+        <CursorPos Y="109"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="109" TopLine="88"/>
+      </Position1>
+      <Position2>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="111" TopLine="88"/>
+      </Position2>
+      <Position3>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="112" TopLine="88"/>
+      </Position3>
+      <Position4>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="107" TopLine="88"/>
+      </Position4>
+      <Position5>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="109" TopLine="88"/>
+      </Position5>
+      <Position6>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="111" Column="38" TopLine="88"/>
+      </Position6>
+      <Position7>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="117" TopLine="88"/>
+      </Position7>
+      <Position8>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="107" TopLine="88"/>
+      </Position8>
+      <Position9>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="109" TopLine="88"/>
+      </Position9>
+      <Position10>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="116" TopLine="88"/>
+      </Position10>
+      <Position11>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="117" TopLine="88"/>
+      </Position11>
+      <Position12>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="107" TopLine="88"/>
+      </Position12>
+      <Position13>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="109" TopLine="88"/>
+      </Position13>
+      <Position14>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="117" TopLine="88"/>
+      </Position14>
+      <Position15>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="107" TopLine="88"/>
+      </Position15>
+      <Position16>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="109" TopLine="88"/>
+      </Position16>
+      <Position17>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="116" TopLine="88"/>
+      </Position17>
+      <Position18>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="117" TopLine="88"/>
+      </Position18>
+      <Position19>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="107" TopLine="88"/>
+      </Position19>
+      <Position20>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="109" TopLine="88"/>
+      </Position20>
+      <Position21>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="116" TopLine="88"/>
+      </Position21>
+      <Position22>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="117" TopLine="88"/>
+      </Position22>
+      <Position23>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="107" TopLine="88"/>
+      </Position23>
+      <Position24>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="109" TopLine="88"/>
+      </Position24>
+      <Position25>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="116" TopLine="88"/>
+      </Position25>
+      <Position26>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="117" TopLine="88"/>
+      </Position26>
+      <Position27>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="107" TopLine="88"/>
+      </Position27>
+      <Position28>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="109" TopLine="88"/>
+      </Position28>
+      <Position29>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="116" TopLine="88"/>
+      </Position29>
+      <Position30>
+        <Filename Value="checkmate.lpr"/>
+        <Caret Line="117" TopLine="88"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
