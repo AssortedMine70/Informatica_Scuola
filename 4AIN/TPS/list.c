@@ -30,13 +30,20 @@ List * newList() {
 	return l;
 }
 
+List * newListWithData(LIST_TYPE data) {
+	List * l = malloc(sizeof(List));
+	l->next = NULL;
+	l->data = data;
+	return l;
+}
+
 List * addInTail(List *l) {
 	return goInTail(l)->next = newList();
 }
 
 // TODO da provare
 List * addInHead(List *l) {
-	List ll = newList();
+	List * ll = newList();
 	ll->next = l;
 	return ll;
 }
@@ -68,6 +75,14 @@ void printList(List *l) {
 	printf("\n");
 }
 
+void mergeInPos(List * l, List * ll, size_t i) {
+	if(countElements(l) < i) return;
+	for(size_t j = 0;  j < i; ++j)
+		l = l->next;
+	List * x = l->next;
+	l->next = ll;
+	goInTail(ll)->next = x;
+}
 
 // Esercizi
 List * newNewList(size_t n) {
@@ -94,6 +109,18 @@ void newNewNewList(List ** l, size_t n) {
 List * newAddInHead(LIST_TYPE n, List * l);
 void * newNewAddInHead(LIST_TYPE n, List ** l);
 
+List * insInPos(int data, size_t i, List * l) {
+	if(countElements(l) < i) return l;
+	for(size_t j = 0;  j < i; ++j) {
+		l = l->next;
+	}
+	List * x = l->next;
+	l->next = newListWithData(data);
+	l->next->next = x;
+	return l;
+}
+
+
 // fin.
 
 int main(void) {
@@ -114,6 +141,12 @@ int main(void) {
 	List * lll = NULL;
 	newNewNewList(&lll, 10);
 	printList(lll);
+	
+	mergeInPos(ll, lll, 3);
+	printList(ll);
+	
+	insInPos(5, 3, l);
+	printList(l);
 	
 	return 0;
 }
