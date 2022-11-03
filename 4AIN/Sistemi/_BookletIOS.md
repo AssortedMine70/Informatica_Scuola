@@ -19,6 +19,13 @@ Esegue il comando che lo segue al livello in cui si era in precedenza.
     Switch(config)#do show clock
     *0:9:5.983 UTC Mon Mar 1 1993
     ```
+3. **exit** ( )
+Esce dalla modalità corrente per tornare alla precedente.
+    ```
+    Switch(config)#exit
+    Switch#
+    ```
+ 
 ### User Exec (>)
 1. **enable** (en)
     Passa a **Priviledged Excec**.
