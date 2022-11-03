@@ -18,23 +18,11 @@ public class Main {
 		textArea.setEditable(false);
 		frame.add(textArea);
 		
-		frame.addMouseListener(new MouseListener() {
+		frame.addMouseListener(frame.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				textArea.append("x: " + frame.getMousePosition().x + ", y: " + frame.getMousePosition().y + "\n");
 			}
-
-			@Override
-			public void mouseClicked(MouseEvent e) {}
-
-			@Override
-			public void mouseReleased(MouseEvent e) {}
-
-			@Override
-			public void mouseEntered(MouseEvent e) {}
-
-			@Override
-			public void mouseExited(MouseEvent e) {}
 		});
 		
 		frame.setVisible(true);
