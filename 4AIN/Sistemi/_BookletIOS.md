@@ -69,7 +69,7 @@ Molti comandi eseguibili in **User Exec** sono comunque ancora eseguibili.
    ```
    SW#copy running-config startup-config
    ```
-
+   
 ### Configure
 - **Comandi Generici**
     1. **no** (n)
@@ -131,4 +131,9 @@ Molti comandi eseguibili in **User Exec** sono comunque ancora eseguibili.
         Imposta il banner, che verrà visualizzato ad ogni riavvio del dispositivo. Il primo carattere di LINE sarà un delimitatore, che quando verrà riscritto indicherà la fine di LINE (nell'esempio `"`).
         ```
         SW(config)#banner motd "LINE"
+        ```
+    6. **hostname** ( ) HOSTNAME
+        Configura l'Hostname.
+        ```
+        SW(config)#hostname HOSTNAME
         ```
