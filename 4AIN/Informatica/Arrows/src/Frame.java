@@ -34,7 +34,6 @@ public class Frame {
 		});
 		
 		frame.add(panel);
-		
 		frame.setVisible(true);
 	}
 }
