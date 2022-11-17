@@ -1,10 +1,12 @@
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 //actionCommand
 public class Tris {
@@ -17,7 +19,7 @@ public class Tris {
 	private ImageIcon o;
 	
 	public Tris() {
-		player = true;
+		player = new Random().nextBoolean();
 		
 		screenSize = 100*3;
 		JFrame frame = new JFrame("Tris");
@@ -37,6 +39,12 @@ public class Tris {
 				Boolean winner;
 				if((winner = check()) != null) {
 					System.out.println(winner);
+					frame.getContentPane().removeAll();
+					frame.repaint();
+					
+					JLabel label = new JLabel((player ? "X" : "O") + " wins", JLabel.CENTER);
+					label.setBounds(0, 0, screenSize, screenSize);
+					frame.add(label);
 				} else
 					player = !player;
 			}
@@ -55,7 +63,7 @@ public class Tris {
 		frame.getContentPane().setPreferredSize(new Dimension(screenSize, screenSize));
         frame.pack();
 		frame.setVisible(true);
-		}
+	}
 	
 	private Boolean check() {
 		// Rows & Columns
@@ -71,7 +79,6 @@ public class Tris {
 			if((fields[i/3].getIcon() == x) && (fields[(i/3)+3].getIcon() == x) && (fields[(i/3)+6].getIcon() == x))
 				return false;
 		}
-		
 		// Diagonals
 		if(((fields[4].getIcon() == o) && fields[0].getIcon() == o) && (fields[8].getIcon() == o))
 			return true;
