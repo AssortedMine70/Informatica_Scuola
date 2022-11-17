@@ -107,7 +107,7 @@ Molti comandi eseguibili in **User Exec** sono comunque ancora eseguibili.
                 ```
                 SW(config-line)#login
                 ```
-    3. **interface () 
+    3. **interface** () 
         - **vlan <0-n>**
             Passa alla configurazione di un interfaccia.
             ```
