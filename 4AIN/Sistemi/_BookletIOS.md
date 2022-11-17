@@ -52,7 +52,7 @@ Molti comandi eseguibili in **User Exec** sono comunque ancora eseguibili.
     ```
 2. **clock** ( )
     Impostazioni riguardanti l'orologio di sistemia.
-    - **set** (s) HH:MM:SS MONTH DAY YEAR
+    - **set** (s) HH:MM:SS DAY MONTH YEAR
         Imposta l'orologio di sistema.
         ```
         SW#clock set 22:20:00 3 NOV 2022
