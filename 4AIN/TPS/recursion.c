@@ -124,10 +124,10 @@ int max(List *l, int maxTemp){
 
 int main(void) {
 	printList(insInTesta(10, simpleList(10, 10)));
-//	printList(insOrd(25, simpleList(10, 10)));
-//	printList(cancellaTutti(10, simpleList(10, 10)));
-//	printList(insInPos(42, 5, simpleList(10, 10)));
-//	printListInversa(simpleList(10, 10));
-//	printf("%d\n", max(simpleList(10, 10), INT_MIN));
+	printList(insOrd(25, simpleList(10, 10)));
+	printList(cancellaTutti(10, simpleList(10, 10)));
+	printList(insInPos(42, 5, simpleList(10, 10)));
+	printListInversa(simpleList(10, 10));
+	printf("%d\n", max(simpleList(10, 10), INT_MIN));
 	return 0;
 }
