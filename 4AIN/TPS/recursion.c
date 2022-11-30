@@ -114,12 +114,20 @@ List * cancellaTutti(int data, List *l) {
 	return insInTesta(l->data, cancellaTutti(data, l->next));
 }
 
+int max(List *l, int maxTemp){
+	if(l == NULL)
+		return maxTemp;
+	if(l->data > maxTemp)
+		return max(l->next, l->data);
+	return max(l->next, maxTemp); 
+}
 
 int main(void) {
 	printList(insInTesta(10, simpleList(10, 10)));
-	printList(insOrd(25, simpleList(10, 10)));
-	printList(cancellaTutti(10, simpleList(10, 10)));
-	printList(insInPos(42, 5, simpleList(10, 10)));
-	printListInversa(simpleList(10, 10));
+//	printList(insOrd(25, simpleList(10, 10)));
+//	printList(cancellaTutti(10, simpleList(10, 10)));
+//	printList(insInPos(42, 5, simpleList(10, 10)));
+//	printListInversa(simpleList(10, 10));
+//	printf("%d\n", max(simpleList(10, 10), INT_MIN));
 	return 0;
 }
