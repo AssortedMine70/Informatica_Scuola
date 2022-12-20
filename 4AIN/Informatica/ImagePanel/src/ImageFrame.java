@@ -6,9 +6,14 @@ import java.io.File;
 import java.io.IOException;
 
 class Panel extends JPanel implements ActionListener, KeyListener, MouseListener {
-    JButton in, out;
-    Image image;
-    int y, circleX, circleY;
+    private final int X_MAX = 100;
+    private final int X_MIN = -X_MAX;
+    private final int Y_MAX = 100;
+    private final int Y_MIN = -Y_MAX;
+    private final JButton in;
+    private final JButton out;
+    private Image image;
+    private int y, circleX, circleY;
 
     public Panel() throws IOException {
         setFocusable(true);
@@ -35,8 +40,18 @@ class Panel extends JPanel implements ActionListener, KeyListener, MouseListener
         circleY = -300;
     }
 
-    private int f(int i) {
-        return (int) Math.sin((double) i);
+    private double f(double x) {
+        return 30*Math.sin(x);
+    }
+
+    // Xm = (Xf - Width/2) / [Width / (Xmax-Xmin)]
+    private double fxToMx(int fx) {
+        return (fx - getWidth()/2.) / (float)(getWidth() / X_MAX-X_MIN);
+    }
+
+    // Yf = -Ym*[Height/(Ymax-Ymin)]+ Height/2
+    private int myToFy(double my) {
+        return (int) my * (getHeight()/(Y_MAX-Y_MIN)) + getHeight()/2;
     }
 
     @Override
@@ -47,19 +62,23 @@ class Panel extends JPanel implements ActionListener, KeyListener, MouseListener
 
         g.drawOval(circleX, circleY, 70, 70);
 
-        for (int i = 0; i < getWidth(); ++i)
-            g.drawLine(i, y + f(i), i, y + f(i));
+        for (int fx = 0; fx < getWidth(); ++fx) {
+            double mx = fxToMx(fx);
+            double my = f(mx);
+            int fy = myToFy(my);
+            System.out.println(fx + " " + mx);
+            System.out.println(fy + " " + my);
+            g.drawLine(fx, y + fy, fx, y + fy);
+        }
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
-            case "in":
-                image = image.getScaledInstance(image.getWidth(null) + 20, image.getHeight(null) + 20, Image.SCALE_SMOOTH);
-                break;
-            case "out":
-                image = image.getScaledInstance(image.getWidth(null) - 20, image.getHeight(null) - 20, Image.SCALE_SMOOTH);
-                break;
+            case "in" ->
+                    image = image.getScaledInstance(image.getWidth(null) + 20, image.getHeight(null) + 20, Image.SCALE_SMOOTH);
+            case "out" ->
+                    image = image.getScaledInstance(image.getWidth(null) - 20, image.getHeight(null) - 20, Image.SCALE_SMOOTH);
         }
         repaint();
     }
