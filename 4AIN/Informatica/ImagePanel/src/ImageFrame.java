@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.IOException;
 
 class Panel extends JPanel implements ActionListener, KeyListener, MouseListener {
-    private final int X_MAX = 100;
+    private final int X_MAX = 10;
     private final int X_MIN = -X_MAX;
     private final int Y_MAX = 100;
     private final int Y_MIN = -Y_MAX;
@@ -66,8 +66,6 @@ class Panel extends JPanel implements ActionListener, KeyListener, MouseListener
             double mx = fxToMx(fx);
             double my = f(mx);
             int fy = myToFy(my);
-            System.out.println(fx + " " + mx);
-            System.out.println(fy + " " + my);
             g.drawLine(fx, y + fy, fx, y + fy);
         }
     }
