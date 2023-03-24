@@ -1,3 +1,4 @@
+
 # Booklet sulla Comandistica Cisco
 Federico Santucci, 2022
 ***
@@ -69,7 +70,14 @@ Molti comandi eseguibili in **User Exec** sono comunque ancora eseguibili.
    ```
    SW#copy running-config startup-config
    ```
-   
+5. **show** ( )
+    Stampa a schermo.
+    - **ip** ()
+	    - **route** ()
+		   Mostra la rabella di routing del Router.
+		   ```
+		  Router#show ip route
+		  ```
 ### Configure
 - **Comandi Generici**
     1. **no** (n)
@@ -78,7 +86,7 @@ Molti comandi eseguibili in **User Exec** sono comunque ancora eseguibili.
         SW(config)#no enable secret
         ```
 - **Terminal**
-    1. **enable** (ena)
+	1. **enable** (ena)
     Imposta una password per il passaggio da **User Exec** a **Priviledged Exec**.
         - **password** \(p\) PASSWORD
             Salvataggio in chiaro della password nel **Running Config**.
@@ -89,7 +97,7 @@ Molti comandi eseguibili in **User Exec** sono comunque ancora eseguibili.
             Sakvataggio criptato della password nel **Running Config**.
             ```
             SW(config)#enable secret PASSWORD
-    2. **line** ( )
+	2. **line** ( )
         - **console**/**vty <0-n>**
             Passa alla configurazione di un metodo di accesso al dispositivo.
             ```
@@ -107,7 +115,7 @@ Molti comandi eseguibili in **User Exec** sono comunque ancora eseguibili.
                 ```
                 SW(config-line)#login
                 ```
-    3. **interface** () 
+	3. **interface** () 
         - **vlan <0-n>**
             Passa alla configurazione di un interfaccia.
             ```
@@ -120,20 +128,26 @@ Molti comandi eseguibili in **User Exec** sono comunque ancora eseguibili.
                 ```
                 SW(config-if)#ip address 192.168.0.254 255.255.255.0
                 ```
-    4. **service** (se)
+	4. **service** (se)
         Serve per abilitare diversi servizi.
         - **password-encryption** \(p\)
             Abilita il servizio di criptazione delle password, che quindi cripterà tutte le password salvate nel **Running Config** e cripterà quelle che poi verranno impostate successivamente.
          ```
         SW(config)#service password-ecryption
         ```
-    5. **banner** (ba) **motd** (m) LINE
+	5. **banner** (ba) **motd** (m) LINE
         Imposta il banner, che verrà visualizzato ad ogni riavvio del dispositivo. Il primo carattere di LINE sarà un delimitatore, che quando verrà riscritto indicherà la fine di LINE (nell'esempio `"`).
         ```
         SW(config)#banner motd "LINE"
         ```
-    6. **hostname** ( ) HOSTNAME
+	6. **hostname** ( ) HOSTNAME
         Configura l'Hostname.
         ```
         SW(config)#hostname HOSTNAME
+        ```
+	7. **ip** ( )
+		- **route** ( )  NETWORK NETMASK GATEWAY
+		   Aggiunge una rotta statica al router.
+		```
+        Router(config)#ip route 192.168.5.0 255.255.255.0 192.168.10.254
         ```
