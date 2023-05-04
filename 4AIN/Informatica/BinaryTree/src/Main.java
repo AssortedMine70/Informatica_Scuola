@@ -18,26 +18,30 @@ class BinaryTree {
         }
     }
 
-    Node root;
+    private Node root;
 
     public BinaryTree(Node root) {
         this.root = root;
     }
 
-    public void toStringRec(Node node, StringBuilder str) {
+    private void toStringRec(Node node, String side, StringBuilder str, int lv) {
         if(node == null)
             return;
 
-        str.append(node.data + " ");
+        for(int i = 0; i < (lv - 1)*2; ++i)
+            str.append(" ");
+        if(lv != 0)
+                str.append("└─");
+        str.append(side + node.data + "\n");
 
-        toStringRec(node.L, str);
-        toStringRec(node.R, str);
+        toStringRec(node.L, "L: ", str, lv+1);
+        toStringRec(node.R, "R: ", str, lv+1);
     }
 
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
-        toStringRec(root, str);
+        toStringRec(root, "", str, 0);
         return str.toString();
     }
 }
