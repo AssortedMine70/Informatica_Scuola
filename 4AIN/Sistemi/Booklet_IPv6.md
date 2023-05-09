@@ -1,5 +1,35 @@
 # Sistemi Appunti IPv6
 
+# Indice
+
+- [Sistemi Appunti IPv6](#sistemi-appunti-ipv6)
+- [1. Limitazioni IPv4](#1-limitazioni-ipv4)
+- [2. Introduzione](#2-introduzione)
+- [3. Vantaggi](#3-vantaggi)
+- [4. Header IPv6 (4x40 byte)](#4-header-ipv6--4x40-byte-)
+  * [4.1. Campi dell’Header](#41-campi-dell-header)
+  * [4.2. Vantaggi dell’Header](#42-vantaggi-dell-header)
+- [5. Coesistenza tra IPv4 e IPv6](#5-coesistenza-tra-ipv4-e-ipv6)
+- [6. Rappresentazione degli Indirizzi IPv6](#6-rappresentazione-degli-indirizzi-ipv6)
+  * [6.1. Formato Predefinito](#61-formato-predefinito)
+  * [6.2. Formato Abbreviato](#62-formato-abbreviato)
+    + [6.2.1. Omettere gli zeri](#621-omettere-gli-zeri)
+    + [6.2.2. Utilizzo dei due punti doppi](#622-utilizzo-dei-due-punti-doppi)
+- [7. Prefisso](#7-prefisso)
+- [8. Tipi di Indirizzi IPv6](#8-tipi-di-indirizzi-ipv6)
+  * [8.1. Unicast](#81-unicast)
+    + [8.1.1. Unicast Globale (GUA)](#811-unicast-globale--gua-)
+    + [8.1.1.1. Struttura](#8111-struttura)
+    + [8.1.2. Link-Local (FE80::/10)](#812-link-local--fe80---10-)
+    + [8.1.3. Unique local (FC00::/7)](#813-unique-local--fc00---7-)
+  * [8.2. Multicast](#82-multicast)
+  * [8.3. Anycast](#83-anycast)
+- [9. Tipi di Configurazione](#9-tipi-di-configurazione)
+  * [9.1. **Opzione 1 RA:** solo SLAAC](#91---opzione-1-ra----solo-slaac)
+  * [9.1.1. Generazione dell’ID Interfaccia](#911-generazione-dell-id-interfaccia)
+  * [9.2. **Opzione 2 RA: SLAAC e DHCPv6 stateless**](#92---opzione-2-ra--slaac-e-dhcpv6-stateless--)
+  * [9.3. **Opzione 3 RA: DHCPv6 stateful**](#93---opzione-3-ra--dhcpv6-stateful--)
+
 # 1. Limitazioni IPv4
 
 - Esaurimento degli indirizzi IP
