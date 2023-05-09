@@ -19,7 +19,7 @@ L’IETF (Internet Engineering Task Force) negli anni ‘90 inizia a formulare i
 
 # 4. Header IPv6 (4x40 byte)
 
-![Header IPv6](./assets/HeaderIPv6.png)
+![Header IPv6](assets/HeaderIPv6.png)
 
 ## 4.1. Campi dell’Header
 
