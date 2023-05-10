@@ -18,7 +18,7 @@
 - [8. Tipi di Indirizzi IPv6](#8-tipi-di-indirizzi-ipv6)
   * 8.1. Unicast
     + 8.1.1. Unicast Globale (GUA)
-    + 8.1.1.1. Struttura
+      + 8.1.1.1. Struttura
     + 8.1.2. Link-Local (FE80::/10)
     + 8.1.3. Unique local (FC00::/7)
   * 8.2. Multicast
