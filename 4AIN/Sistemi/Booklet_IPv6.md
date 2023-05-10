@@ -296,6 +296,7 @@ Un server DHCPv6 stateful assegna e conserva un elenco che indica la corrisponde
 
 # 9.4. DCHPv6
 ICMPv6 include quattro nuovi protocolli come parte del protocollo Neighbor Discovery (ND o NDP).
+
 Scambio di messaggi tra un router IPv6 e un dispositivo IPv6:
 - Messaggio Router Solicitation (RS)
 - Messaggio Router Advertisement (RA)
@@ -303,3 +304,8 @@ Scambio di messaggi tra un router IPv6 e un dispositivo IPv6:
 Scambio di messaggi tra dispositivi IPv6:
 - Messaggio Neighbor Solicitation (NS)
 - Messaggio Neighbor Advertisement (NA)
+
+## 9.4.1 Rilevamento degli indirizzi duplicati (DAD)
+
+Quando a un dispositivo viene assegnato un indirizzo unicast globale o un indirizzo unicast link-local, si consiglia di eseguire il DAD sull'indirizzo in modo da garantire che sia univoco. Per verificare l'univocità di un indirizzo, il dispositivo invia un messaggio NS con il proprio indirizzo IPv6 come indirizzo IPv6 di destinazione, come mostrato nella Figura 3. Se un altro dispositivo nella rete dispone di questo indirizzo, risponde con un messaggio NA. Questo messaggio NA comunica al dispositivo di invio che l'indirizzo è in uso. Se un messaggio NA corrispondente non viene restituito entro un determinato periodo di tempo, l'indirizzo unicast è univoco e può essere utilizzato.
+
