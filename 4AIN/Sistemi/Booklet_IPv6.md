@@ -296,10 +296,10 @@ Un server DHCPv6 stateful assegna e conserva un elenco che indica la corrisponde
 
 # 9.4. DCHPv6
 ICMPv6 include quattro nuovi protocolli come parte del protocollo Neighbor Discovery (ND o NDP).
-
 Scambio di messaggi tra un router IPv6 e un dispositivo IPv6:
 - Messaggio Router Solicitation (RS)
 - Messaggio Router Advertisement (RA)
+
 Scambio di messaggi tra dispositivi IPv6:
 - Messaggio Neighbor Solicitation (NS)
 - Messaggio Neighbor Advertisement (NA)
