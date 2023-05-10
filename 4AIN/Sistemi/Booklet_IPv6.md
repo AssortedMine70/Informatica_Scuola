@@ -192,6 +192,21 @@ Questi indirizzi vengono utilizzato per l’indirizzamento locale all’interno 
 
 Viene utilizzato per inviare un singolo pacchetto a diverse destinazioni.
 
+## 8.2.1. Multicast Assegnato
+
+Ci sono due tipi di Multicast Assegnato:
+- **Gruppo multicast di tipo "tutti i nodi"** (FF02::1): si tratta di un gruppo multicast al quale si uniscono tutti i dispositivi abilitati per IPv6. Un pacchetto inviato a questo gruppo viene ricevuto ed elaborato da tutte le interfacce IPv6 nel link o nella rete. Questo ha lo stesso effetto dell'indirizzo di broadcast in IPv4.
+- **Gruppo multicast di tipo "tutti i router"** FF02::2: si tratta di un gruppo multicast al quale si uniscono tutti i router IPv6. Un pacchetto inviato a questo gruppo viene ricevuto ed elaborato da tutti i router IPv6 nel link o nella rete. I dispositivi abilitati per IPv6 inviano messaggi RS ICMPv6 all'indirizzo multicast di tipo "tutti i router". Il messaggio RS richiede al router IPv6 di emettere un messaggio RA per assistere il dispositivo nella configurazione del proprio indirizzo.
+
+## 8.2.2. Mutlicast richiesti dal nodo
+
+Un indirizzo multicast richiesto dal nodo è simile all'indirizzo multicast di tipo "tutti i nodi". Il vantaggio di un indirizzo multicast richiesto dal nodo è dato dal fatto che è associato a un indirizzo multicast Ethernet speciale. Ciò consente alla NIC Ethernet di filtrare il frame esaminando l'indirizzo MAC di destinazione senza inviarlo al processo IPv6 per verificare se il dispositivo è la destinazione prevista del pacchetto IPv6.
+
+<aside>
+💡 Un indirizzo di multicast non può essere mittente, ma solo destinatario.
+
+</aside>
+
 ## 8.3. Anycast
 
 Indirizzo unicast che può essere assegnato a più dispositivi. Verrà instradato al dispositivo più vicino con quell’indirizzo.
@@ -278,3 +293,13 @@ Un server DHCPv6 stateful assegna e conserva un elenco che indica la corrisponde
 💡 L'indirizzo del gateway predefinito può essere ottenuto solo dinamicamente dal messaggio RA. Il server DHCPv6 stateless o stateful non fornisce l'indirizzo del gateway predefinito.
 
 </aside>
+
+# 9.4. DCHPv6
+ICMPv6 include quattro nuovi protocolli come parte del protocollo Neighbor Discovery (ND o NDP).
+
+Scambio di messaggi tra un router IPv6 e un dispositivo IPv6:
+- Messaggio Router Solicitation (RS)
+- Messaggio Router Advertisement (RA)
+Scambio di messaggi tra dispositivi IPv6:
+- Messaggio Neighbor Solicitation (NS)
+- Messaggio Neighbor Advertisement (NA)
