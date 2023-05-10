@@ -25,7 +25,7 @@
   * 8.3. Anycast
 - [9. Tipi di Configurazione](#9-tipi-di-configurazione)
   * 9.1. **Opzione 1 RA:** solo SLAAC
-  * 9.1.1. Generazione dell’ID Interfaccia
+    + 9.1.1. Generazione dell’ID Interfaccia
   * 9.2. **Opzione 2 RA: SLAAC e DHCPv6 stateless**
   * 9.3. **Opzione 3 RA: DHCPv6 stateful**
 
