@@ -5,7 +5,7 @@
 - [1. Limitazioni IPv4](#1-limitazioni-ipv4)
 - [2. Introduzione](#2-introduzione)
 - [3. Vantaggi](#3-vantaggi)
-- [4. Header IPv6 (4x40 byte)](#4-header-ipv6--4x40-byte-)
+- [4. Header IPv6 (10x32 byte)](#4-header-ipv6--4x40-byte-)
   * 4.1. Campi dell’Header
   * 4.2. Vantaggi dell’Header
 - [5. Coesistenza tra IPv4 e IPv6](#5-coesistenza-tra-ipv4-e-ipv6)
