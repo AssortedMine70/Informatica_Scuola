@@ -46,7 +46,7 @@ L’IETF (Internet Engineering Task Force) negli anni ‘90 inizia a formulare i
 | Gestione dei Pacchetti migliorata | header semplificato e con un numero ridotto di campi |
 | Elimina il NAT (Network Address Translation) | Non più necessario tra indirizzi pubblici e privati |
 
-# 4. Header IPv6 (4x40 byte)
+# 4. Header IPv6 (10x32 byte)
 
 ![Header IPv6](assets/HeaderIPv6.png)
 
