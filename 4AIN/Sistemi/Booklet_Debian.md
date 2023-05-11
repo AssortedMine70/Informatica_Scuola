@@ -8,6 +8,11 @@
 ### 1.2. Path per modificare la configurazione
 ` etc/network/interfaces `
 
+<aside>
+💡 /etc/network/interfaces necessita di sudo per essere modificato.
+    
+</aside>
+
 #### Configurazione di esempio
 ``` interfaces
 allow hotplug ens33
@@ -36,6 +41,11 @@ in ` /etc/sysctl.conf ` scommenta:
 net.ipv4.ip_forward=1
 ```
 
+<aside>
+💡 /etc/sysctl.conf necessita di sudo per essere modificato.
+    
+</aside>
+
 ## 4. Comandi per riavviare servizi
 
 ### 4.1. Networking Service
@@ -43,11 +53,3 @@ net.ipv4.ip_forward=1
 
 ### 4.2 Systctl
 ` service systemd-sysctl restart ` (necessario per IPv4 forwarding)
-
-Usefull info:
-
-/etc/network/interfaces and /etc/sysctl.conf need sudo to edit
-
-first net iface is ens33, second is usally ens36
-
-routers need routes only for nets they are not interfaced with
