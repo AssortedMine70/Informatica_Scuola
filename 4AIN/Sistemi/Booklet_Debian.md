@@ -27,7 +27,7 @@ iface ens33 inet static
 ## 2. Configurazione delle rotte statiche
 
 ### 2.1. Aggiunta di una rotta
-` ip route add DESTINATION_NETWORK via NEXT_HOP dev ENS `
+` ip route add DESTINATION_NETWORK/NM via NEXT_HOP dev ENS `
 
 ### 2.2. Rimozione di una rotta
 ` ip route delete ... `
