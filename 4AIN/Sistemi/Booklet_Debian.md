@@ -51,5 +51,9 @@ net.ipv4.ip_forward=1
 ### 4.1. Networking Service
 ` service networking restart ` (necessario per net config)
 
+oppure
+
+` systemctl restart networking `
+
 ### 4.2 Systctl
 ` service systemd-sysctl restart ` (necessario per IPv4 forwarding)
