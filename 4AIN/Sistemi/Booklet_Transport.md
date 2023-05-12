@@ -40,7 +40,7 @@ A livello Transport, l'insieme di dati che vengono scambiati per far comunicare 
 
 ### 1.2. Segmentazione dei dati e riassemblaggio dei segmenti
 
-Perchè i dati del livello Application siano inviabili su internet secondo le limitazioni dei protocolli sottostanti e dei supporti di comunicazione, il livello Transport dispone di appositi servizi per svolgere una funzione di **segmentazione** dei dati ricevuti dal livello Application in dimensioni appropriate. Viene poi aggiunto un header che varia dal protocollo utilizzato di livello Transport. Questi header contengono anche le informazioni con cui riassembleare i segmenti una volta ricevuti dall'altro Host.
+Perchè i dati del livello Application siano inviabili su internet secondo le limitazioni dei protocolli sottostanti e dei supporti di comunicazione, il livello Transport dispone di appositi servizi per svolgere una funzione di **segmentazione** dei dati ricevuti dal livello Application in dimensioni appropriate. Viene poi aggiunto un header che varia dal protocollo utilizzato di livello Transport. Questi header contengono anche le informazioni con cui riassembleare i segmenti una volta ricevuti dall'altro Host e permettono .
 
 ### 1.3. Identificazione delle applicazioni
 
@@ -48,3 +48,8 @@ Per trasmettere i flussi di dati alle applicazioni appropriate, il livello Trans
 
 ## 1.4. Multiplexing delle conversazioni
 
+In una rete, l'invio di alcuni tipi di dati come un unico flusso di comunicazione può consumare tutta la larghezza di banda disponibile, ostacolando il funzionamento di altre comunicazioni contemporanee, oltre a complicare il recupero degli errori e la ritrasmissione di dati danneggiati. Il frazionamento dei dati in segmenti più piccoli consente che molte comunicazioni diverse provenienti da molti utenti diversi possano essere intrecciate (multiplexing) sulla stessa rete.
+
+// REVISIONA
+
+Per identificare ogni segmento dei dati, il livello trasporto aggiunge un header contenente dati binari organizzati in diversi campi. I valori contenuti in questi campi permettono ai diversi protocolli del livello trasporto di eseguire diverse funzioni nella gestione della comunicazione dei dati.
