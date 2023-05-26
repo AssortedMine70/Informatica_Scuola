@@ -70,6 +70,7 @@ oppure
 ## 2. route
 
 ` route print ` stampa a schermo le rotte impostate.
+
 ` route ADD <destination_network> MASK <subnet_mask> <gateway_ip> [metric_cost] ` per impostare una nuova rotta statica.
 
 <aside>
