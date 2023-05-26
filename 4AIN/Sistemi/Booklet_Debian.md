@@ -30,10 +30,13 @@ iface ens33 inet static
 ### 2.1. Aggiunta di una rotta
 ` ip route add DESTINATION_NETWORK/NM via NEXT_HOP dev ENS `
 
-### 2.2. Rimozione di una rotta
+### 2.2. Aggiunta di una rotta di default
+` ip route add default via NEXT_HOP `
+
+### 2.3. Rimozione di una rotta
 ` ip route delete ... `
 
-### 2.3. Show delle rotte configurate
+### 2.4. Show delle rotte configurate
 ` ip route show `
 
 ## 3. Configurazione dell'IP forwarding
@@ -56,5 +59,20 @@ oppure
 
 ` systemctl restart networking `
 
-### 4.2 Systctl
+### 4.2. Systctl
 ` service systemd-sysctl restart ` (necessario per IPv4 forwarding)
+
+# Comandi Utili su Windows
+
+## 1. ipconfig
+` ipconfig ` mostra la configurazione delle varie interfacce di rete.
+
+## 2. route
+
+` route print ` stampa a schermo le rotte impostate.
+` route ADD <destination_network> MASK <subnet_mask> <gateway_ip> [metric_cost] ` per impostare una nuova rotta statica.
+
+<aside>
+💡 Le rotte impostate in questo modo vengono perse ad un eventuale riavvio.
+    
+</aside>
