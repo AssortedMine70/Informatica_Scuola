@@ -6,7 +6,7 @@
 ` ip a `
 
 ### 1.2. Path per modificare la configurazione
-` etc/network/interfaces `
+` /etc/network/interfaces `
 
 <aside>
 💡 /etc/network/interfaces necessita di sudo per essere modificato.
