@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Random;
 
 class LabelsBuilder {
-    static List getLabels() {
-        ArrayList<String> labels = new ArrayList<String>();
+    static List<String> getLabels() {
+        ArrayList<String> labels = new ArrayList<>();
         for (int i = 'A'; i < 'Z'; ++i)
             labels.add(Character.toString(i));
         return labels;
@@ -49,8 +49,32 @@ class NodoGrafico {
     }
 }
 
+class ArcoGrafico {
+    private final NodoGrafico startNode, endNode;
+    private final int weight;
+
+    public ArcoGrafico(NodoGrafico startNode, NodoGrafico endNode, int weight) {
+        this.startNode = startNode;
+        this.endNode = endNode;
+        this.weight = weight;
+    }
+
+    public NodoGrafico getStartNode() {
+        return startNode;
+    }
+
+    public NodoGrafico getEndNode() {
+        return endNode;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+}
+
 class GraphPanel extends JPanel {
     private final List<NodoGrafico> nodes = new ArrayList<>();
+    private final List<ArcoGrafico> arcs = new ArrayList<>();
     private final int diameter = 50;
     private NodoGrafico lastSelectedNode = null;
     private Point draggingPosition = null;
@@ -69,7 +93,22 @@ class GraphPanel extends JPanel {
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
+                NodoGrafico destinationNode = getClickedNode(draggingPosition);
+                if(lastSelectedNode != null && destinationNode != null) {
+                    String weightString = JOptionPane.showInputDialog(null, "Inserisci peso");
+                    ArcoGrafico arc;
+                    try {
+                        if(weightString == null)
+                            throw new Exception();
+                        int weight = Integer.parseInt(weightString);
+                        arc = new ArcoGrafico(lastSelectedNode, destinationNode, weight);
+                        arcs.add(arc);
+                    } catch (Exception ex) {
+                        JOptionPane.showMessageDialog(null,"Inserire un peso valido.");
+                    }
+                }
                 lastSelectedNode = null;
+                repaint();
             }
         });
 
@@ -77,12 +116,12 @@ class GraphPanel extends JPanel {
             @Override
             public void mouseDragged(MouseEvent e) {
                 super.mouseDragged(e);
-
+                draggingPosition = e.getPoint();
                 NodoGrafico clickedNode = getClickedNode(e.getPoint());
-                if(clickedNode != null) {
+                if(lastSelectedNode == null && clickedNode != null) {
                     lastSelectedNode = clickedNode;
                 }
-                draggingPosition = e.getPoint();
+                repaint();
             }
         });
     }
@@ -90,10 +129,8 @@ class GraphPanel extends JPanel {
     private NodoGrafico getClickedNode(Point point) {
         for (NodoGrafico node : nodes) {
             Rectangle nodeBounds = new Rectangle(node.getX() - diameter/2, node.getY() - diameter/2, diameter, diameter);
-            if(nodeBounds.contains(point)) {
-                System.out.println("sei dentro un nodo");
+            if(point != null && nodeBounds.contains(point))
                 return node;
-            }
         }
         return null;
     }
@@ -106,15 +143,20 @@ class GraphPanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        g.setColor(Color.BLACK);
+        for (ArcoGrafico arc : arcs) {
+            NodoGrafico startNode = arc.getStartNode();
+            NodoGrafico endNode = arc.getEndNode();
+            g.drawLine(startNode.getX(), startNode.getY(), endNode.getX(), endNode.getY());
+        }
+
+        if(lastSelectedNode != null)
+            g.drawLine(lastSelectedNode.getX(), lastSelectedNode.getY(), (int) draggingPosition.getX(), (int) draggingPosition.getY());
 
         for (NodoGrafico node : nodes) {
             g.setColor(node.getColor());
             g.fillOval(node.getX() - diameter/2, node.getY() - diameter/2, diameter, diameter);
         }
-
-        if(lastSelectedNode != null)
-            // TODO SYSO
-            g.drawLine(lastSelectedNode.getX(), lastSelectedNode.getY(), (int) draggingPosition.getX(), (int) draggingPosition.getY());
     }
 }
 
